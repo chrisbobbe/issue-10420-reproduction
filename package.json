@@ -2,7 +2,7 @@
   "name": "issue-10420-reproduction",
   "private": true,
   "scripts": {
-    "start": "MONGO_URL=mongodb://localhost:27017/issue-10420-reproduction?replicaSet=plaidypusrs MONGO_OPLOG_URL='mongodb://oplogger:96182ef8180d3447@localhost:27017,localhost:27016,localhost:27015/local?authSource=admin&replicaSet=plaidypusrs' meteor run",
+    "start": "MONGO_URL=mongodb://localhost:27017/issue-10420-reproduction?replicaSet=[REPLICA_SET_NAME] MONGO_OPLOG_URL='mongodb://[USER]:[PASSWORD]@localhost:27017,localhost:27016,localhost:27015/local?authSource=[AUTH_SOURCE]&replicaSet=[REPLICA_SET_NAME]' meteor run",
     "test": "meteor test --once --driver-package meteortesting:mocha",
     "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
     "visualize": "meteor --production --extra-packages bundle-visualizer"
